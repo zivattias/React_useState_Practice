@@ -1,0 +1,10 @@
+.poster-rounded {
+    border-radius: 10px;
+    border: solid;
+    
+    border-width: 2px;
+}
+
+.poster-aqua {
+    border-color: aqua;
+}
