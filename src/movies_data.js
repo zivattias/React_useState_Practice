@@ -18,3 +18,5 @@ export const movies = [
         rating: 9.6
     }
 ]
+
+
