@@ -1,0 +1,4 @@
+.movies-gallery {
+    display: flex;
+    flex-direction: row;
+}

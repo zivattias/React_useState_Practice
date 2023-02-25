@@ -2,6 +2,7 @@
 import { Button } from "react-bootstrap";
 import Poster from "../Poster/Poster";
 import { getRatingName } from "./utils";
+import "./MovieCard.css"
 
 // export default function MovieCard({movie}) {
 //     const my_style = {
@@ -46,7 +47,7 @@ export default function MovieCard(props) {
     console.log(props)
 
     return (
-        <div>
+        <div className="movie-card">
 
             <h5>{props.movieData.name}</h5>
 

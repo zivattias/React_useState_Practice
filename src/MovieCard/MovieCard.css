@@ -1,0 +1,6 @@
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+}

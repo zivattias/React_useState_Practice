@@ -7,6 +7,7 @@ export default function Poster({poster_url}) {
         className='poster-rounded poster-aqua'
         src={poster_url}
         alt="movies"
+        width={75}
       />
     )
   }
