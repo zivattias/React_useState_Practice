@@ -33,10 +33,10 @@ export default function SearchForm(props) {
         setImgIdx(0);
     };
 
-    const handleResetButton = () => {
-        setCurrImgUrl(null);
-        setSearchText("");
-    };
+    // const handleResetButton = () => {
+    //     setCurrImgUrl(null);
+    //     setSearchText("");
+    // };
 
     const getImagesAmount = (searchText) => {
         if (Array.isArray(IMG_DATA[searchText])) {
@@ -82,7 +82,10 @@ export default function SearchForm(props) {
                     </Button>
                     {currImgUrl && (
                         <Button
-                            onClick={handleResetButton}
+                            onClick={() => {
+                                setCurrImgUrl(null);
+                                setSearchText("");
+                            }}
                             variant="outline-primary"
                             type="reset"
                         >
