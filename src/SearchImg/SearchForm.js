@@ -12,10 +12,12 @@ export default function SearchForm(props) {
     const [currImgIdx, setImgIdx] = useState(0);
     const [totalSearches, setTotalSearches] = useState(0);
     const [imagesFound, setImagesFound] = useState(0);
+    const [submittedText, setSubmittedText] = useState("");
 
     const handleTextSubmit = (event) => {
         event.preventDefault();
         console.log(IMG_DATA);
+        setSubmittedText(searchText);
 
         if (searchText.toLowerCase() in IMG_DATA) {
             console.log(IMG_DATA.searchText);
@@ -104,11 +106,13 @@ export default function SearchForm(props) {
             {currImgUrl !== "NOT_FOUND" && currImgUrl !== null && (
                 <>
                     <SearchImg imgUrl={currImgUrl} />
-                    <ImgButtons
-                        onButtonClicked={handleImagesIndex}
-                        currIdx={currImgIdx + 1}
-                        arrLen={getImagesAmount(searchText)}
-                    ></ImgButtons>
+                    {getImagesAmount(submittedText) > 1 ? (
+                        <ImgButtons
+                            onButtonClicked={handleImagesIndex}
+                            currIdx={currImgIdx + 1}
+                            arrLen={getImagesAmount(submittedText)}
+                        ></ImgButtons>
+                    ) : null}
                 </>
             )}
         </Stack>
