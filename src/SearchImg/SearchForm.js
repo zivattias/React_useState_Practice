@@ -6,7 +6,7 @@ import ImgCounter from "../ImgCounter/ImgCounter.js";
 import { IMG_DATA } from "./imgsData.js";
 import SearchImg from "./SearchImg";
 
-export default function SearchForm(props) {
+export default function SearchForm() {
     const [searchText, setSearchText] = useState("");
     const [currImgUrl, setCurrImgUrl] = useState(null);
     const [currImgIdx, setImgIdx] = useState(0);
@@ -118,5 +118,3 @@ export default function SearchForm(props) {
         </Stack>
     );
 }
-
-// Hi

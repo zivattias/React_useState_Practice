@@ -16,6 +16,7 @@ export const IMG_DATA = {
         "https://mcdn.wallpapersafari.com/medium/82/15/pXhUb7.jpg",
         "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2352&q=80",
     ],
-    giraffe:
+    giraffe: [
         "https://assets.nrdc.org/sites/default/files/styles/full_content--retina/public/media-uploads/9905972176_058687136b_o.jpg",
+    ],
 };
