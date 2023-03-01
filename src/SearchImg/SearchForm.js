@@ -47,20 +47,26 @@ export default function SearchForm() {
         return 1;
     };
 
+    // const handleImagesIndex = (direction) => {
+    //     if (direction === "R") {
+    //         if (currImgIdx !== IMG_DATA[searchText].length - 1) {
+    //             setImgIdx((n) => n + 1);
+    //             setCurrImgUrl(IMG_DATA[searchText][currImgIdx + 1]);
+    //         }
+    //     } else if (direction === "L") {
+    //         if (currImgIdx !== 0) {
+    //             setImgIdx((n) => n - 1);
+    //             setCurrImgUrl(IMG_DATA[searchText][currImgIdx - 1]);
+    //         }
+    //     }
+    // };
+
     const handleImagesIndex = (direction) => {
-        console.log(currImgIdx);
-        if (direction === "R") {
-            if (currImgIdx !== IMG_DATA[searchText].length - 1) {
-                setImgIdx((n) => n + 1);
-                setCurrImgUrl(IMG_DATA[searchText][currImgIdx + 1]);
-            }
-        } else if (direction === "L") {
-            if (currImgIdx !== 0) {
-                setImgIdx((n) => n - 1);
-                setCurrImgUrl(IMG_DATA[searchText][currImgIdx - 1]);
-            }
+        const nextIdx = direction === "R" ? currImgIdx + 1 : currImgIdx - 1;
+        if (IMG_DATA[searchText][nextIdx]) {
+            setImgIdx(nextIdx);
+            setCurrImgUrl(IMG_DATA[searchText][nextIdx]);
         }
-        console.log(currImgIdx);
     };
 
     return (
